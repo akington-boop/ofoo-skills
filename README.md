@@ -8,6 +8,7 @@ An [agentskills.io](agentskills.io)-compatible collection of reusable AI skills.
 | --- | --- |
 | [changelog](skills/changelog/SKILL.md) | Generating or updating Keep a Changelog entries from staged changes or Git history. |
 | [commit-message](skills/commit-message/SKILL.md) | Drafting concise Git commit messages from staged changes, with an optional issue ID. |
+| [cve-table](skills/cve-table/SKILL.md) | Reporting npm dependency advisories in a compact Markdown table. |
 | [upscale-markdown](skills/upscale-markdown/SKILL.md) | Adding semantically appropriate emoji to eligible Markdown H2 and H3 headings while preserving all other content. |
 | [wcag-audit](skills/wcag-audit/SKILL.md) | Report-only WCAG 2.2 AA accessibility audits of staged UI changes, a repository, or a focused source path. |
 
