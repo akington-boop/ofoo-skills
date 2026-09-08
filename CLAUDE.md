@@ -12,6 +12,7 @@ An [agentskills.io](agentskills.io)-compatible collection of Agent Skills. There
   - `changelog/` — generates or updates Keep a Changelog entries from Git history or staged changes.
   - `commit-message/` — drafts an issue-prefixed Git commit message from staged changes without committing.
   - `cve-table/` — renders npm audit advisories as a compact Markdown table without remediation.
+  - `phipii-mini-audit/` — audits staged PII/PHI changes for translation-blocking coverage and exposure risks.
   - `upscale-markdown/` — decorates eligible Markdown H2 and H3 headings with semantic emoji.
   - `wcag-audit/` — produces report-only WCAG 2.2 AA accessibility audits of UI code.
   New skills go here.
