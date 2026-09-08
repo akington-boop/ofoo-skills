@@ -10,6 +10,7 @@ An [agentskills.io](agentskills.io)-compatible collection of Agent Skills. There
 
 - `skills/` — the actual skills in this collection. Each skill is its own directory containing a `SKILL.md`:
   - `changelog/` — generates or updates Keep a Changelog entries from Git history or staged changes.
+  - `commit-message/` — drafts an issue-prefixed Git commit message from staged changes without committing.
   - `upscale-markdown/` — decorates eligible Markdown H2 and H3 headings with semantic emoji.
   - `wcag-audit/` — produces report-only WCAG 2.2 AA accessibility audits of UI code.
   New skills go here.
