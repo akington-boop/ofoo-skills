@@ -8,6 +8,7 @@ An [agentskills.io](https://agentskills.io)-compatible collection of reusable AI
 | --- | --- |
 | [changelog](skills/changelog/SKILL.md) | Generating or updating Keep a Changelog entries from staged changes or Git history. |
 | [commit-message](skills/commit-message/SKILL.md) | Drafting concise Git commit messages from staged changes, with an optional issue ID. |
+| [crux-audit](skills/crux-audit/SKILL.md) | Full coding-convention audit of TS/TSX code against fourteen bundled rule docs, plus `/crux-audit install` to wire the routing table into a CLAUDE.md. |
 | [cve-table](skills/cve-table/SKILL.md) | Reporting npm dependency advisories in a compact Markdown table. |
 | [phipii-mini-audit](skills/phipii-mini-audit/SKILL.md) | Auditing staged PII/PHI changes for translation-blocking coverage and exposure risks. |
 | [upscale-markdown](skills/upscale-markdown/SKILL.md) | Adding semantically appropriate emoji to eligible Markdown H2 and H3 headings while preserving all other content. |
@@ -23,6 +24,7 @@ Install individial skills `--skill <name>`
 npx skills add akington-boop/ofoo-skills -g -a claude-code \
   --skill changelog \
   --skill commit-message \
+  --skill crux-audit \
   --skill cve-table \
   --skill phipii-mini-audit \
   --skill upscale-markdown \
