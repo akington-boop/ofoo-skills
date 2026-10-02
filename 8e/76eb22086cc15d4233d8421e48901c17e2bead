@@ -1,0 +1,39 @@
+skills/crux-audit/references/INDEX.md
+  s_86131224d36a5f::t_28130198cc093b 17
+skills/crux-audit/SKILL.md
+  s_4fa5ec69ffe51d::t_16d477256cb0fe 3
+  s_86131224d36a5f::t_28130198cc093b 22
+  s_86131224d36a5f::t_be720e87b16d34 70-72,200
+skills/crux-audit/README.md
+  s_86131224d36a5f::t_be720e87b16d34 5-6,12
+skills/crux-audit/references/complexity.md
+  s_86131224d36a5f::t_28130198cc093b 1-5
+skills/crux-audit/references/string-checks.md
+  s_86131224d36a5f::t_28130198cc093b 16
+skills/crux-audit/references/component-architecture.md
+  s_86131224d36a5f::t_28130198cc093b 7
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.13",
+  "base_commit_sha": "8e76eb22086cc15d4233d8421e48901c17e2bead",
+  "prompts": {},
+  "sessions": {
+    "s_4fa5ec69ffe51d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "198fff06-b900-4cbc-8ee0-fc6094f459e5",
+        "model": "claude-sonnet-5-5"
+      },
+      "human_author": null
+    },
+    "s_86131224d36a5f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "a375bf26-f072-47fc-839a-178a00bb8087",
+        "model": "claude-sonnet-5-5"
+      },
+      "human_author": "Andy Kington🐧 <akington@webmd.net>"
+    }
+  }
+}
