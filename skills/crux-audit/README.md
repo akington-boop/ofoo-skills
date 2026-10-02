@@ -10,8 +10,8 @@ issues, never edits code or **proposes remedies**.
 **Still in progress**: Coding conventions - these need to be polished and in some cases invented, corrected or made more coherent (folder/class naming...👀). The output could be better too.   
 
 **What's good**: I'm happy with the way this skill works and it's features.
-1 `/crux-audit` Audit a changeset, file, or folder against a number of coding-convention files. Also pretty cheap code and cognitive complexity check.
-2 Install a [triggered context router](./references/INDEX.md) in your root CLAUDE.md file, this will load a set of universal baseline coding conventions full time and conditionally load additional convention files when the coding or planning task requires it.   
+1. `/crux-audit` Audit a changeset, file, or folder against a number of coding-convention files. Also pretty cheap code and cognitive complexity check.
+2. Install a [triggered context router](./references/INDEX.md) in your root CLAUDE.md file, this will load a set of universal baseline coding conventions full time and conditionally load additional convention files when the coding or planning task requires it.
 
 ## Usage
 
