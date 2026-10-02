@@ -1,0 +1,39 @@
+skills/crux-audit/docs/handoff-extract-refactoring.md
+  s_138f3e20ed2a3a::t_079f8e3fca7700 1-38
+skills/crux-audit/SKILL.md
+  s_138f3e20ed2a3a::t_cfadc6e31d2fae 70-71
+  s_138f3e20ed2a3a::t_112fd78cfd5f9d 196
+  s_138f3e20ed2a3a::t_068af939022d12 3
+  s_138f3e20ed2a3a::t_be8219b758a03d 117-118
+  s_138f3e20ed2a3a::t_ce5257e1aca0c5 276-277
+skills/crux-audit/CHANGELOG.md
+  s_86131224d36a5f::t_ff64fdae474575 1-2,4-10
+  s_86131224d36a5f::t_fcbbda0e387c20 3
+  s_86131224d36a5f::t_30b0f29c4220cc 11-12
+asterix_story_log.json
+  s_138f3e20ed2a3a::t_9e34d1099b86f1 51-57
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.13",
+  "base_commit_sha": "5d839e3e1cce6cfce995e21593fa45e971c8fc6b",
+  "prompts": {},
+  "sessions": {
+    "s_138f3e20ed2a3a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "608a0371-338c-4d47-86dd-7cfce893de2e",
+        "model": "claude-sonnet-5-5"
+      },
+      "human_author": "Andy Kington🐧 <akington@webmd.net>"
+    },
+    "s_86131224d36a5f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "a375bf26-f072-47fc-839a-178a00bb8087",
+        "model": "claude-sonnet-5-5"
+      },
+      "human_author": "Andy Kington🐧 <akington@webmd.net>"
+    }
+  }
+}
