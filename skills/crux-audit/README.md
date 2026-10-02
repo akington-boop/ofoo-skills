@@ -3,7 +3,24 @@
 Audits TS/TSX code against fourteen coding-convention rule docs: four that need
 whole-file/class judgment (complexity, architecture, directory structure, naming) plus
 ten path-scoped/global rules normally enforced inline while editing. Report-only: surfaces
-issues, never edits code or proposes remedies.
+issues, never edits code or **proposes remedies**.
+
+ℹ️ This is a work in progress.
+
+**Still in progress**: Coding conventions - these need to be polished and in some cases invented, corrected or made more coherent (folder/class naming...👀). The output could be better too.   
+
+**What's good**: I'm happy with the way this skill works and it's features.
+1 `/crux-audit` Audit a changeset, file, or folder against a number of coding-convention files. Also pretty cheap code and cognitive complexity check.
+2 Install a [triggered context router](./references/INDEX.md) in your root CLAUDE.md file, this will load a set of universal baseline coding conventions full time and conditionally load additional convention files when the coding or planning task requires it.   
+
+## Usage
+
+```text
+/crux-audit
+/crux-audit full
+/crux-audit src/some/path
+/crux-audit install
+```
 
 ## What it does
 
@@ -23,11 +40,9 @@ and a lighter always-on router, without duplicating anything.
 if needed, and — if a router section already exists there — checks whether it's still
 current before touching it.
 
-## Usage
+If you have them installed it will also run and cat the output of `phi-pii-mini-audit` and `wcag-audit`.
 
-```text
-/crux-audit
-/crux-audit full
-/crux-audit src/some/path
-/crux-audit install
-```
+## Points of interest
+
+* This skill should never suggest any refactor options - it's not smart enough and suggests naive options.
+
