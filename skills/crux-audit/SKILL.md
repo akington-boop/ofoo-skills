@@ -1,7 +1,8 @@
 ---
 name: crux-audit
-description: Use when the user says "/crux-audit" or wants a full coding-convention review of generated or existing TS/TSX code against all fourteen rule docs (the four post-code-audit judgment rules plus the ten path-scoped/global mechanical rules). Also use when the user says "/crux-audit install" to wire this skill's bundled routing table into a project or global CLAUDE.md for inline, path-scoped enforcement. Audit mode is report-only and never edits code or extracts classes unprompted; install is the one action permitted to create or edit a CLAUDE.md/CLAUDE.local.md file.
+description: Use when the user says "/crux-audit" or wants a full coding-convention review of generated or existing TS/TSX code against all fourteen rule docs (the four post-code-audit judgment rules plus the ten path-scoped/global mechanical rules). Also use when the user says "/crux-audit install" to wire this skill's bundled routing table into a project or global CLAUDE.md for inline, path-scoped enforcement. Audit mode is report-only: it surfaces issues, never edits code, and leaves remedies to a dedicated refactoring agent; install is the one action permitted to create or edit a CLAUDE.md/CLAUDE.local.md file.
 argument-hint: "[full | <path> | install] (default: staged)"
+version: 2
 ---
 
 # crux-audit
@@ -66,9 +67,8 @@ consistency) can be evaluated with full context.
 2. Read all fourteen reference files in full.
 3. Gather candidate `*.ts`/`*.tsx` files per the resolved target.
 4. For each file, evaluate it against all fourteen rules:
-   - **Complexity and refactoring** — flag single-responsibility violations, and methods
-     whose cognitive complexity exceeds 15 or cyclomatic complexity exceeds 10. These are
-     review triggers, not automatic extraction requirements.
+   - **Complexity** — flag single-responsibility violations, and methods whose cognitive
+     complexity exceeds 15 or cyclomatic complexity exceeds 10.
    - **Component architecture** — flag business logic embedded in components instead of
      service classes, service constructors that resolve dependencies via a locator instead
      of taking them as typed parameters, and misuse of the documented patterns (factory,
@@ -114,11 +114,8 @@ consistency) can be evaluated with full context.
      `SystemStyleObject<Theme>`, a theme sourced from vanilla MUI instead of
      `@webmdhs/mui-theme`, barrel imports of MUI components, non-`Rounded` icon variants,
      or conditional `className` composition not using `clsx`.
-5. For any complexity-and-refactoring finding that would require extracting a class,
-   propose the extraction (never perform it — see **Output**). Include: the sub-concern
-   and its estimated complexity, the new class's interface and dependency-injection
-   plan, and how testability improves without breaking the original class's private
-   encapsulation.
+5. State each finding as the issue alone: what, where, which rule. Remedies belong to a
+   dedicated refactoring agent.
 6. Skip files with no findings silently in the violations section, but still count them
    as scanned.
 
@@ -196,14 +193,10 @@ Report structure:
 <n> http-response-patterns, <n> language-idioms, <n> shared-code,
 <n> state-observables, <n> state-service-classes, <n> string-checks, <n> styling
 
-## Complexity and Refactoring
+## Complexity
 
 ### `path/to/file.ts:12` — <Class/method name>
 **Issue:** <single-responsibility violation | cognitive/cyclomatic complexity score>
-**Extraction proposal** (if applicable, pending approval — not yet applied):
-- Sub-concern: …
-- New class interface & DI plan: …
-- Testability improvement: …
 
 ## Component Architecture
 
@@ -280,10 +273,8 @@ report "✅ No coding-convention findings." with the scan summary still included
 ## Output
 
 Report the absolute path to the generated markdown file and a one-line summary of
-findings. Report-only: never edit a source file as part of this skill, including
-approved extraction proposals — even a follow-up turn applies those as a separate,
-explicit step outside this skill. (The `install` target is the sole exception — see
-**Install**.)
+findings. Report-only: this skill edits no source file. (The `install` target is the
+sole exception — see **Install**.)
 
 ## Triggers
 
