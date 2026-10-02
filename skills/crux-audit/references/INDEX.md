@@ -14,4 +14,4 @@ wherever this skill is installed (e.g. `~/.claude/skills/crux-audit/references/`
 - **MUI theme / `sx` / styling** → `styling-strategy.md`
 - **aliases / server isolation / file grouping** → `directory-structure.md`
 - **naming / extraction / service-component split** → `naming-conventions.md`, `component-architecture.md`
-- **implementing a full story/ticket** → every doc above, all fourteen rule docs except `complexity-and-refactoring.md`
+- **implementing a full story/ticket** → every doc above, all fourteen rule docs except `complexity.md`

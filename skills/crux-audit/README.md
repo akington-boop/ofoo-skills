@@ -2,15 +2,14 @@
 
 Audits TS/TSX code against fourteen coding-convention rule docs: four that need
 whole-file/class judgment (complexity, architecture, directory structure, naming) plus
-ten path-scoped/global rules normally enforced inline while editing. Report-only; never
-edits code or extracts classes unprompted.
+ten path-scoped/global rules normally enforced inline while editing. Report-only: surfaces
+issues, never edits code or proposes remedies.
 
 ## What it does
 
 Use `/crux-audit` before committing, or `/crux-audit full` / `/crux-audit <path>` for a
 wider pass. It writes a dated markdown report (`audit<MMDD-HHMM>.md`) to the current
-directory listing findings per rule category, with extraction proposals for any
-class-splitting recommendation (never applied automatically).
+directory listing findings per rule category.
 
 The fourteen rule docs are bundled in [`references/`](references/) — the skill has no
 dependency on any path outside its own directory. [`references/INDEX.md`](references/INDEX.md)

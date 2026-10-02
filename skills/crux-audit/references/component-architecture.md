@@ -4,7 +4,7 @@ See [component-declarations.md](component-declarations.md) for component declara
 
 Service classes hold business logic; components are purely presentational. A service is a focused business-logic, view-data-shaping, or factory class — not a grab-bag of UI handlers.
 
-New and extracted service classes take dependencies as constructor parameters typed to interfaces or contracts, so dependencies remain explicit and replaceable in tests. Composition roots — entry points, UI providers, app setup — construct services and pass dependencies in; see [naming-conventions.md](naming-conventions.md) for `Store.Instance` scoping. Resolve dependencies at construction, never through a runtime service locator. Use React context when the resource's lifetime, configuration, or test replacement is scoped to a component subtree.
+Service classes take dependencies as constructor parameters typed to interfaces or contracts, so dependencies remain explicit and replaceable in tests. Composition roots — entry points, UI providers, app setup — construct services and pass dependencies in; see [naming-conventions.md](naming-conventions.md) for `Store.Instance` scoping. Resolve dependencies at construction, never through a runtime service locator. Use React context when the resource's lifetime, configuration, or test replacement is scoped to a component subtree.
 
 ## Patterns
 
