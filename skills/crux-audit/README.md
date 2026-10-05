@@ -11,7 +11,7 @@ issues, never edits code or **proposes remedies**.
 
 **What's good**: I'm happy with the way this skill works and it's features.
 1. `/crux-audit` Audit a changeset, file, or folder against a number of coding-convention files. Also pretty cheap code and cognitive complexity check.
-2. Install a [triggered context router](./references/INDEX.md) in your root CLAUDE.md file, this will load a set of universal baseline coding conventions full time and conditionally load additional convention files when the coding or planning task requires it.
+2. `/crux-audit install` Install a [triggered context router](./references/INDEX.md) in your root CLAUDE.md file, this will load a set of universal baseline coding conventions full time and conditionally load additional convention files when the coding or planning task requires it.
 
 ## Usage
 
@@ -25,7 +25,7 @@ issues, never edits code or **proposes remedies**.
 ## What it does
 
 Use `/crux-audit` before committing, or `/crux-audit full` / `/crux-audit <path>` for a
-wider pass. It writes a dated markdown report (`audit<MMDD-HHMM>.md`) to the current
+wider pass. It writes a dated markdown report (`audit-<MMDD-HHMM>.md`) to the current
 directory listing findings per rule category.
 
 The fourteen rule docs are bundled in [`references/`](references/) — the skill has no
@@ -45,4 +45,3 @@ If you have them installed it will also run and cat the output of `phi-pii-mini-
 ## Points of interest
 
 * This skill should never suggest any refactor options - it's not smart enough and suggests naive options.
-

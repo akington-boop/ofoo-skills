@@ -2,7 +2,7 @@
 name: crux-audit
 description: Use when the user says "/crux-audit" or wants a full coding-convention review of generated or existing TS/TSX code against all fourteen rule docs (the four post-code-audit judgment rules plus the ten path-scoped/global mechanical rules). Also use when the user says "/crux-audit install" to wire this skill's bundled routing table into a project or global CLAUDE.md for inline, path-scoped enforcement. Audit mode is report-only; it surfaces issues, never edits code, and leaves remedies to a dedicated refactoring agent; install is the one action permitted to create or edit a CLAUDE.md/CLAUDE.local.md file.
 argument-hint: "[full | <path> | install] (default: staged)"
-version: 2
+version: 1
 ---
 
 # crux-audit
