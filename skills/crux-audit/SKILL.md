@@ -2,7 +2,7 @@
 name: crux-audit
 description: Use when the user says "/crux-audit" or wants a full coding-convention review of generated or existing TS/TSX code against all fourteen rule docs (the four post-code-audit judgment rules plus the ten path-scoped/global mechanical rules). Also use when the user says "/crux-audit install" to wire this skill's bundled routing table into a project or global CLAUDE.md for inline, path-scoped enforcement. Audit mode is report-only; it surfaces issues, never edits code, and leaves remedies to a dedicated refactoring agent; install is the one action permitted to create or edit a CLAUDE.md/CLAUDE.local.md file.
 argument-hint: "[full | <path> | install] (default: staged)"
-version: 1
+version: 2
 ---
 
 # crux-audit
@@ -150,19 +150,29 @@ report.
    section — any heading or paragraph telling the reader to consult a routing table /
    `INDEX.md` for path-scoped rule docs, regardless of exact wording or which skill it
    names (e.g. a personal setup pointed at a different `docs/INDEX.md`).
-   - **Not found** → after confirming with the user, append:
+   - **Not found** → after confirming with the user, append this block verbatim, with
+     `<refs>` replaced by `<skill-dir>/references/` (use `~/` for the home directory when
+     `<skill-dir>` is under it). The load conditions MUST be inline in the CLAUDE.md —
+     never replace them with a pointer to `INDEX.md`, or agents skip the read:
 
      ```markdown
      ## Coding Convention Router (crux-audit)
 
-     Before starting work on `**/*.{ts,tsx}`, read `<skill-dir>/references/INDEX.md`
-     and follow its routing table to pick which `crux-audit` rule docs (same
-     `references/` folder) apply.
+     STOP before any Edit/Write on `.ts`/`.tsx`: Read the rule docs below first. Paths are relative to `<refs>`. Always Read `universal-baseline.md` first.
+
+     - When writing HTTP / fetch / `ResultOf` / json-http-request / API code, Read `http-response-patterns.md`, `async-patterns.md`, `shared-code.md`.
+     - When writing a React component, Read `component-declarations.md`, `guard-components.md`, `state-observables-react.md`, `state-service-classes.md`, `async-patterns.md`, `styling-strategy.md`.
+     - When writing a service/domain class, Read `state-service-classes.md`, `async-patterns.md`, `http-response-patterns.md`.
+     - When touching MUI theme / `sx` / styling, Read `styling-strategy.md`.
+     - When touching aliases / server isolation / file grouping, Read `directory-structure.md`.
+     - When naming, extracting, or splitting component/service, Read `naming-conventions.md`, `component-architecture.md`.
+     - Otherwise, or for a full story/ticket, Read `INDEX.md` and follow it.
+
+     Before the first edit, state: "Loaded rule docs: <list>".
      ```
 
    - **Found** → verify it's current instead of skipping blindly. Compare its
-     referenced path and trigger list against this skill's actual
-     `references/INDEX.md`:
+     referenced path and inline trigger list against the block above:
      - Same resolved path, same triggers → report "router already up to date in
        `<file>`" and change nothing.
      - Different (stale trigger list, points at a renamed/different skill, points at a

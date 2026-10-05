@@ -37,7 +37,7 @@ and a lighter always-on router, without duplicating anything.
 
 `/crux-audit install` automates that wiring: it asks whether to update your global
 `CLAUDE.md`, the current repo's `CLAUDE.md`, or its `CLAUDE.local.md`, creates the file
-if needed, and — if a router section already exists there — checks whether it's still
+if needed, writes the trigger list inline (so the conditions are always in context, not behind a link), and — if a router section already exists there — checks whether it's still
 current before touching it.
 
 If you have them installed it will also run and cat the output of `phi-pii-mini-audit` and `wcag-audit`.

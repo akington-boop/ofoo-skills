@@ -1,5 +1,11 @@
 # Changelog
 
+## [2] - 2026-10-05
+
+### Changed
+
+- `/crux-audit install` now writes the full trigger list inline in `CLAUDE.md` (STOP gate, per-task rule-doc conditions, "Loaded rule docs" statement) instead of a link to `INDEX.md`, which agents skipped. Existing routers are compared against the inline block.
+
 ## [1] - 2026-10-02
 
 ### Added
