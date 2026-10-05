@@ -1,0 +1,23 @@
+skills/crux-audit/CHANGELOG.md
+  s_4b5f962aa5db75::t_a6a21838ba5d1a 3-8
+skills/crux-audit/README.md
+  s_4b5f962aa5db75::t_4b21dd2763d0e6 40
+skills/crux-audit/SKILL.md
+  s_4b5f962aa5db75::t_40d3e47c51a227 5,153-156,161-171,175
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.13",
+  "base_commit_sha": "5803baa46c5ef5cb28d9045b2116637dfafe8a7c",
+  "prompts": {},
+  "sessions": {
+    "s_4b5f962aa5db75": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d091d20b-f882-4733-9004-72d37afa75b7",
+        "model": "claude-sonnet-5-5"
+      },
+      "human_author": "Andy Kington🐧 <akington@webmd.net>"
+    }
+  }
+}
