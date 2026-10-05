@@ -1,0 +1,22 @@
+skills/crux-audit/CHANGELOG.md
+  s_d2cd94d59d1b8a::t_b4d5e849e58b3c 1-2,4-20
+  s_d2cd94d59d1b8a::t_b227041a2b5971 3
+asterix_story_log.json
+  s_d2cd94d59d1b8a::t_8ad45416fc220b 65-71
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.13",
+  "base_commit_sha": "c05b20fa891df031170768bc47c57922f42820ce",
+  "prompts": {},
+  "sessions": {
+    "s_d2cd94d59d1b8a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "de06ede1-a3fa-46a5-800f-43e9de1b33dd",
+        "model": "claude-sonnet-5-5"
+      },
+      "human_author": "Andy Kington🐧 <akington@webmd.net>"
+    }
+  }
+}
