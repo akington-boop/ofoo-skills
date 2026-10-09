@@ -1,0 +1,19 @@
+skills/crux-audit/docs/destructive-button-not-red-handoff.md
+  s_fb9e6a0ac544f4::t_d0ff3914a3fd68 1-54
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.13",
+  "base_commit_sha": "40af3a20b7255d408a63b89f2e7ff4255141e594",
+  "prompts": {},
+  "sessions": {
+    "s_fb9e6a0ac544f4": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "34cbc94c-9a0f-4725-a7ca-16f2ef69e0ab",
+        "model": "claude-sonnet-5-5"
+      },
+      "human_author": "Andy Kington🐧 <akington@webmd.net>"
+    }
+  }
+}
